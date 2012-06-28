@@ -1,0 +1,16 @@
+{
+    "author": "Andreas Lind Petersen <andreas@one.com>",
+    "name": "passerror",
+    "description": "Simple helper for handling error and success with two different callbacks",
+    "version": "0.0.1",
+    "repository": {
+        "url": "git://github.com/papandreou/passerror"
+    },
+    "main": "lib/index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "engines": {
+        "node": "*"
+    }
+}
