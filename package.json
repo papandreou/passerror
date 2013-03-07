@@ -6,7 +6,7 @@
     "repository": {
         "url": "git://github.com/papandreou/passerror"
     },
-    "main": "lib/index.js",
+    "main": "lib/passError.js",
     "dependencies": {},
     "devDependencies": {},
     "optionalDependencies": {},
