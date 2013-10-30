@@ -8,7 +8,12 @@
     },
     "main": "lib/passError.js",
     "dependencies": {},
-    "devDependencies": {},
+    "devDependencies": {
+        "mocha": "1.13.0",
+        "sinon": "1.7.3",
+        "unexpected": "1.0.1",
+        "unexpected-sinon": "0.1.0"
+    },
     "optionalDependencies": {},
     "engines": {
         "node": "*"
