@@ -25,6 +25,16 @@ describe('passError', function () {
             expect(errorCallback, 'was called with', err);
             expect(successCallback, 'was not called');
         });
+
+        it('should throw an error if called twice', function () {
+            var fn = passError(errorCallback, successCallback);
+            fn();
+            expect(errorCallback, 'was not called');
+            expect(successCallback, 'was called once');
+            expect(fn, 'to throw exception', 'passError: The callback was called more than once');
+            expect(errorCallback, 'was not called');
+            expect(successCallback, 'was called once');
+        });
     });
 
     it('should throw an error when given wrong arguments', function () {
