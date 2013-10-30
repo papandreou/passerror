@@ -2,7 +2,7 @@
     "author": "Andreas Lind Petersen <andreas@one.com>",
     "name": "passerror",
     "description": "Simple helper for handling error and success with two different callbacks",
-    "version": "0.0.2",
+    "version": "1.0.0",
     "repository": {
         "url": "git://github.com/papandreou/passerror"
     },
