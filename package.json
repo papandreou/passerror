@@ -1,21 +1,21 @@
 {
-    "author": "Andreas Lind Petersen <andreas@one.com>",
-    "name": "passerror",
-    "description": "Simple helper for handling error and success with two different callbacks",
-    "version": "1.0.0",
-    "repository": {
-        "url": "git://github.com/papandreou/passerror"
-    },
-    "main": "lib/passError.js",
-    "dependencies": {},
-    "devDependencies": {
-        "mocha": "1.13.0",
-        "sinon": "1.7.3",
-        "unexpected": "1.0.1",
-        "unexpected-sinon": "0.1.0"
-    },
-    "optionalDependencies": {},
-    "engines": {
-        "node": "*"
-    }
+  "author": "Andreas Lind Petersen <andreas@one.com>",
+  "name": "passerror",
+  "description": "Simple helper for handling error and success with two different callbacks",
+  "version": "1.0.0",
+  "repository": {
+    "url": "git://github.com/papandreou/passerror"
+  },
+  "main": "lib/passError.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.13.0",
+    "sinon": "1.7.3",
+    "unexpected": "1.0.1",
+    "unexpected-sinon": "0.1.0"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
 }
