@@ -5,33 +5,34 @@ var expect = require('unexpected-sinon'),
 describe('passError', function () {
     describe('called with a successCallback and an errorCallback', function () {
         var successCallback,
-            errorCallback;
+            errorCallback,
+            cb;
         beforeEach(function () {
             successCallback = sinon.spy();
             errorCallback = sinon.spy();
+            cb = passError(errorCallback, successCallback);
         });
 
         it('should call the successCallback with the correct arguments on success', function () {
-            passError(errorCallback, successCallback)(null, 1, 2, 3);
+            cb(null, 1, 2, 3);
             expect(errorCallback, 'was not called');
             expect(successCallback, 'was called once');
             expect(successCallback, 'was called with', 1, 2, 3);
         });
 
-        it('should call the errorCallback with the correct arguments on success', function () {
+        it('should call the errorCallback with the error on failure', function () {
             var err = new Error('foo');
-            passError(errorCallback, successCallback)(err);
+            cb(err);
             expect(errorCallback, 'was called once');
             expect(errorCallback, 'was called with', err);
             expect(successCallback, 'was not called');
         });
 
         it('should throw an error if called twice', function () {
-            var fn = passError(errorCallback, successCallback);
-            fn();
+            cb();
             expect(errorCallback, 'was not called');
             expect(successCallback, 'was called once');
-            expect(fn, 'to throw exception', 'passError: The callback was called more than once');
+            expect(cb, 'to throw exception', 'passError: The callback was called more than once');
             expect(errorCallback, 'was not called');
             expect(successCallback, 'was called once');
         });
