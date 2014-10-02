@@ -28,11 +28,23 @@ describe('passError', function () {
             expect(successCallback, 'was not called');
         });
 
-        it('should throw an error if called twice', function () {
+        it('should throw an error if called again', function () {
             cb();
             expect(errorCallback, 'was not called');
             expect(successCallback, 'was called once');
-            expect(cb, 'to throw exception', 'passError: The callback was called more than once');
+            expect(cb, 'to throw exception', 'passError: The callback was called again with no error');
+            expect(errorCallback, 'was not called');
+            expect(successCallback, 'was called once');
+        });
+
+        it('should throw an error including the stack if called again with an error', function () {
+            cb();
+            expect(errorCallback, 'was not called');
+            expect(successCallback, 'was called once');
+            var err = new Error('testing testing 123');
+            expect(function () {
+                cb(err);
+            }, 'to throw exception', 'passError: The callback was called again with ' + err.stack);
             expect(errorCallback, 'was not called');
             expect(successCallback, 'was called once');
         });
