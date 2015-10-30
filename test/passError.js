@@ -8,8 +8,8 @@ describe('passError', function () {
             errorCallback,
             cb;
         beforeEach(function () {
-            successCallback = sinon.spy();
-            errorCallback = sinon.spy();
+            successCallback = sinon.spy().named('successCallback');
+            errorCallback = sinon.spy().named('errorCallback');
             cb = passError(errorCallback, successCallback);
         });
 
