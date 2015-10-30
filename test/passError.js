@@ -1,4 +1,4 @@
-var expect = require('unexpected-sinon'),
+var expect = require('unexpected').clone().use(require('unexpected-sinon')),
     sinon = require('sinon'),
     passError = require('../lib/passError');
 
