@@ -1,5 +1,5 @@
 {
-  "author": "Andreas Lind Petersen <andreas@one.com>",
+  "author": "Andreas Lind <andreas@one.com>",
   "name": "passerror",
   "description": "Simple helper for handling error and success with two different callbacks",
   "version": "1.1.0",
